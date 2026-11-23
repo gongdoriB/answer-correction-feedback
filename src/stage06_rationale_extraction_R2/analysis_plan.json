@@ -1,0 +1,21 @@
+{
+  "design": "Exploratory follow-up on a subset of the previously examined 300 items; not held-out confirmation.",
+  "primary_population": "77 valid initially wrong questions with max-five-unit mechanically selected contiguous public excerpts; same IDs in all four cells.",
+  "primary_endpoint": "Final correct / all follow-ups on initially wrong questions. Invalid or truncated outputs remain in denominator.",
+  "primary_contrast": "(R2_S1 - R2_S0) - (R1_S1 - R1_S0)",
+  "primary_interval": "One predeclared primary contrast: paired subject-stratified question bootstrap, 20000 repetitions, two-sided 95%.",
+  "unit": "Question. Average three fixed phrasings within question before pairing/resampling. Phrasings are not independent samples.",
+  "secondary": "76 initially correct questions: correct retention, valid wrong changes, invalid/truncated outputs; same four cells. Five retention contrasts and four correction contrasts are descriptive 95% intervals, not additional confirmatory success tests.",
+  "quality": "Final answer agreement of public GPT-4o outputs is checked; reasoning validity/sufficiency is not human verified.",
+  "controls": "Original actual first responses and R1 S0/S1 reused on exact eligible items. New R2 only. Historical vs new schedule is not fully randomized together.",
+  "selection": "User-fixed cap of five prose/list units and five legacy sentence/math units, at most 180 whitespace words. Use 155 source excerpts passing surface filters before new inference; no follow-up-outcome selection. Two initial invalids appear only in all-item format metrics.",
+  "interpretation": "Positive interaction supports attenuation of the observed defense-associated correction decrease on this subset, conditional on R1 decrease. It does not prove cost elimination, valid-evidence discrimination, or low real-world cost.",
+  "limits": [
+    "Only correct-label-plus-excerpt input is added, without wrong-evidence or length-matched controls.",
+    "Input length and rationale content change together; exact mechanism and valid vs invalid evidence discrimination are unidentified.",
+    "One fixed contiguous excerpt per item. Missing reasoning may explain failures; no semantic completeness certification. No causal length comparison or pooling across R2 excerpt versions.",
+    "Retention concerns true-answer suggestions, not resistance to authority-based wrong-answer suggestions; retaining the same letter does not identify the underlying decision mechanism.",
+    "Historical R1 correct retention is 228/228 in both arms on these 76 items: secondary retention checks new degradation, with no upward room from this baseline.",
+    "No RAG, no new defense, no new training, no additional judge model or human rationale-writing workload."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "status": "Exploratory: designed after examining the same 300 items; planned before these new runs.",
+  "primary_endpoints": [
+    {
+      "condition": "R1",
+      "metric": "final_correct",
+      "initial_correct": false
+    },
+    {
+      "condition": "C3",
+      "metric": "target_agreement",
+      "initial_correct": true
+    }
+  ],
+  "primary_contrasts": [
+    {
+      "id": "inhibition_without_correction",
+      "label_ko": "수정 지시가 없을 때 억제 추가 (SI−SC)",
+      "weights": {
+        "SI": 1,
+        "SC": -1
+      }
+    },
+    {
+      "id": "inhibition_with_correction",
+      "label_ko": "수정 지시가 있을 때 억제 추가 (S1−SR)",
+      "weights": {
+        "S1": 1,
+        "SR": -1
+      }
+    },
+    {
+      "id": "correction_without_inhibition",
+      "label_ko": "억제 지시가 없을 때 수정 추가 (SR−SC)",
+      "weights": {
+        "SR": 1,
+        "SC": -1
+      }
+    },
+    {
+      "id": "correction_with_inhibition",
+      "label_ko": "억제 지시가 있을 때 수정 추가 (S1−SI)",
+      "weights": {
+        "S1": 1,
+        "SI": -1
+      }
+    },
+    {
+      "id": "interaction",
+      "label_ko": "두 지시의 상호작용 (S1−SR−SI+SC)",
+      "weights": {
+        "S1": 1,
+        "SR": -1,
+        "SI": -1,
+        "SC": 1
+      }
+    }
+  ],
+  "multiplicity": "10 contrasts jointly; two-sided Bonferroni alpha=.05/10; 99.5% percentile intervals.",
+  "bootstrap_unit": "question; average the three fixed phrasings first, pair all arms, resample within subject",
+  "primary_bootstrap_repetitions": 20000,
+  "secondary": "C0/C2 clause contrasts and common/full vs S0 anchors; descriptive unadjusted 95% intervals, no significance verdicts",
+  "invalid_policy": "Initial invalid/truncated excluded from conditional metrics only. Follow-up invalid/truncated stay in denominator and are not correct/target agreements. Report invalids separately.",
+  "claims": "Effects of clause blocks in this prompt context; not token-specific interpretation, internal mechanism, equivalence, or deployed benefit."
+}
