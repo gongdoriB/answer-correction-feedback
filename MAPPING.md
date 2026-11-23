@@ -1,6 +1,5 @@
-# MAPPING: paper results -> notebooks / scripts / inputs
+# MAPPING: results -> notebooks / scripts / inputs
 
-Paper: "Answer Correction in Language Models Following User Feedback: Effects of Anti-Sycophancy Instructions and Rationale Conditions" (DigiCon-26 Track 2).
 
 ## Naming: paper vs. code
 
